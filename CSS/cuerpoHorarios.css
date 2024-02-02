@@ -1,0 +1,107 @@
+
+#contenedor_horarios{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    min-height: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+#contenedor_horarios h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+}
+
+#logo_horarios{
+    transition: all .2s ease;
+}
+#dias .fecha{
+    font-weight: 900;
+}
+
+#dias .hora{
+    font-weight: 200;
+}
+@media only screen and (max-width: 1200px){/* --------------------------------------- */
+    #contenedor_horarios{
+        min-height: 900px;
+    }
+    #logo_horarios{
+        width: 580px;
+        height: 470px;
+    }
+    #contenedor_horarios h2{
+        font-size: 30px;
+    }
+    #navajas_horarios{
+        width: 180px;
+        height: 160px;
+    }
+}
+@media only screen and (max-width: 900px){
+    #contenedor_horarios{
+        min-height: 850px;
+    }
+    #logo_horarios{
+        width: 520px;
+        height: 430px;
+    }
+    #contenedor_horarios h2{
+        font-size: 25px;
+    }
+    #navajas_horarios{
+        width: 160px;
+        height: 140px;
+    }
+}
+@media only screen and (max-width: 768px){
+    #contenedor_horarios{
+        min-height: 700px;
+    }
+    #logo_horarios{
+        width: 450px;
+        height: 360px;
+    }
+    #contenedor_horarios h2{
+        font-size: 20px;
+    }
+    #navajas_horarios{
+        width: 150px;
+        height: 120px;
+    }
+}
+@media only screen and (max-width: 576px){
+    #contenedor_horarios{
+        min-height: 580px;
+    }
+    #logo_horarios{
+        width: 320px;
+        height: 250px;
+    }
+    #contenedor_horarios h2{
+        font-size: 18px;
+    }
+    #navajas_horarios{
+        width: 130px;
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 360px){
+    #contenedor_horarios{
+        min-height: 500px;
+    }
+    #logo_horarios{
+        width: 220px;
+        height: 150px;
+    }
+    #contenedor_horarios h2{
+        font-size: 15px;
+    }
+    #navajas_horarios{
+        width: 100px;
+        height: 70px;
+    }
+}

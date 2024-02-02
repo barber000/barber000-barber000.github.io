@@ -1,0 +1,268 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+#cuerpo{
+    width: 100%;
+    min-height: 92vh;
+    background-image: linear-gradient(45deg, #fdec8c 0, #ffe96b 12.5%, #fadc49 25%, #f0c243 37.5%, #daa947 50%, #c09a62 62.5%, #c79c6b 75%, #b38b68 87.5%, #967056 100%);
+    background-position: center;
+    background-size: 400% 400%;
+    display: flex;
+    /* position: relative; */
+    z-index: 50;
+    animation: gradient 7s ease-in infinite;
+}
+
+#contenedor-form{ /* Formulario */
+    width: 450px;
+    padding: 35px 50px;
+    background-color: white;
+    box-shadow: 2px 5px 20px black;
+    margin: auto;
+    border-radius: 25px;
+}
+#contenedor-form h1, #contenedor-form h5{ /* Titulo del formulario */
+    margin-bottom: 25px;
+}
+
+.input{ /* Ingreso de datos del formulario */
+    color: #3c3c3c;
+    font-size: 15px;
+    line-height: 22px; /*separado entre las fuentes*/
+    background-color: #fbfbfb;
+    border-color: black;
+    padding: 13px 13px 13px 30px;
+    margin-bottom:10px;
+	width:100%;
+	box-sizing:border-box;
+    border-radius: 10px;
+}
+
+.input:focus{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 13px 13px 13px 30px;
+    border-radius: 10px;
+}
+
+textarea{
+	width:100%;
+	height:150px;
+    border: 2px solid rgb(0, 0, 0);
+	line-height:150%;
+	resize:vertical;
+	}
+textarea:focus{
+    border-radius: 10px;
+}
+
+#enviar{
+    float:left;
+	width:100%;
+    padding: 10px 8px;
+    color: black;
+    border: 4px solid rgb(0, 0, 0);
+    font-size:28px;
+    font-weight: bold;
+	transition:all 0.3s;
+
+}
+
+#enviar:hover{
+    background-color:rgba(0,0,0,0);
+    color: white;
+}
+
+.enviar{
+    margin: auto;
+}
+.enviar .transicion{
+	width:0px;
+	height:60px;
+	transition: 0.6s ease;
+}
+
+.enviar:hover .transicion{
+	width:100%;
+	background-color: rgb(0, 0, 0);
+}	
+
+input.error, textarea.error{
+    font-size: 15px;
+    line-height: 22px; /* separado entre las fuentes */
+    background-color:rgb(255, 196, 196);
+    padding: 13px 13px 13px 30px;
+	margin-bottom:10px;
+	width:100%;
+	box-sizing:border-box;
+	border:2px solid #ff0000;
+    border-radius: 10px;
+}
+
+input.error::-webkit-input-placeholder{
+	color:red;
+	}	
+	
+textarea.error::-webkit-input-placeholder{
+	color:red;
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+/* Consultas de medios para hacer responsive */
+@media only screen and (max-width: 1366px) {
+    #cuerpo{
+        min-height: 700px;
+    }
+    #contenedor-form{ /* Formulario */
+        padding: 35px 45px;
+        border-radius: 20px;
+    }
+    #contenedor-form h1, #contenedor-form h5{
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+        #cuerpo{
+            min-height: 650px;
+        }
+        #contenedor-form {
+            width: 400px;
+            padding: 30px 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .input{ /* Ingreso de datos del formulario */
+            font-size: 13px;
+            padding: 10px 10px 10px 25px;
+            width: 100%;
+        }
+        .input:focus{
+            border: 2px solid rgb(0, 0, 0);
+            padding: 10px 10px 10px 30px;
+            width: 100%;
+        }
+        
+        textarea{
+            height:130px;
+            border: 2px solid rgb(0, 0, 0);
+        }
+        
+        #enviar{
+            background-color: rgb(255, 241, 159);
+            border: 3px solid rgb(0, 0, 0);
+            font-size:25px;
+        }
+        
+        .enviar .transicion{
+            height:54px;
+        }
+        
+        input.error, textarea.error{
+            font-size: 13px;
+            padding: 10px 10px 10px 25px;
+        }
+}
+
+@media only screen and (max-width: 900px) {
+    #cuerpo{
+        min-height: 650px;
+    }
+    #contenedor-form {
+        padding: 30px 35px;
+        margin-top: 50px;
+    }
+    #contenedor-form h1{
+        font-size: 20px;
+    }
+    #contenedor-form h5{
+        font-size: 13px;
+    }
+    #enviar{
+        padding: 12px 0;
+        border: 2px solid rgb(0, 0, 0);
+        font-size:20px;
+    }
+    
+    .enviar .transicion{
+        height:50px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #cuerpo{
+        min-height: 550px;
+    }
+    #contenedor-form {
+        width: 280px;
+        padding: 25px;
+    }
+    #contenedor-form h1{
+        font-size: 15px;
+    }
+    #contenedor-form h5{
+        font-size: 10px;
+    }
+    .input{ /* Ingreso de datos del formulario */
+        font-size: 10px;
+        padding: 8px 8px 8px 20px;
+    }
+    .input:focus{
+        padding: 8px 8px 8px 25px;
+    }
+    textarea{
+        height:100px;
+    }
+    #enviar{
+        padding: 12px 0px;
+        font-size:15px;
+    }
+    .enviar .transicion{
+        height: 45px;
+    }
+    input.error, textarea.error{
+        font-size: 10px;
+        padding: 8px 8px 8px 20px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #contenedor-form {
+        width: 220px;
+        padding: 20px 15px;
+    }
+    #contenedor-form h1{
+        font-size: 13px;
+    }
+    #contenedor-form h5{
+        font-size: 10px;
+    }
+    .input{ /* Ingreso de datos del formulario */
+        padding: 6px 6px 6px 15px;
+    }
+    .input:focus{
+        padding: 6px 6px 6px 20px;
+    }
+    textarea{
+        height:100px;
+    }
+    #enviar{
+        padding: 12px 0px;
+        font-size:13px;
+    }
+    .enviar .transicion{
+        height: 44px;
+    }
+    input.error, textarea.error{
+        padding: 6px 6px 6px 15px;
+    }
+}

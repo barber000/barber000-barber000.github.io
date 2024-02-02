@@ -1,0 +1,529 @@
+html{
+    font-family: "Homer Simpson UI";
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+.noselect { /* Nno copiar ni pegar */
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+/* ----------------------------------------ENCABEZADO DE LA PAGINA------------------------------------ */
+#encabezado{ /* Fondo detras detrás del Eslogan */
+    width: 100%; /*5184 * 3456*/
+    background-image: url("../img/fondo_Barberia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    min-height: 800px;
+    text-align: center;
+}
+
+#eslogan{ /* Imagen del Eslogan */
+    width: 900px;
+    height: 500px;
+}
+
+#titulo_eslogan{ /* Titulo debajo de Eslogan */
+    font-size: 50pt;
+    margin-bottom: 60px;
+    color: rgb(239, 184, 139);
+    text-shadow: 5px 2px 0.1px black;
+}
+
+#boton_reserva{ /* Boton de 'HAS TU RESERVA' */
+    font-weight: 800;
+    font-size: 20pt;
+    text-decoration: none;
+    padding: 10px 8px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 5px solid rgb(239, 184, 139);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: scaleBoton .5s ease-in infinite alternate;
+    -webkit-animation: scaleBoton .5s ease-in infinite alternate;
+
+}
+
+#boton_reserva:hover{
+    background-color: rgb(239, 184, 139);
+    color: black;
+}
+/* --------------------QUIENES SOMOS----------------------------- */
+#section_nosotros{ /* contenedor Nosotros */
+    color: white;
+    text-align: center;
+    padding: 0 200px;
+    margin: 100px 0;
+}
+#titulo_nosotros{
+    font-size: 40pt;
+    font-weight: 700;
+    margin-bottom: 60px;
+    transition: all .3s;
+}
+#titulo_nosotros:hover{
+    color: rgb(239, 184, 139);
+}
+#section_nosotros p{
+    font-size: 23px;
+    text-align: center;
+}
+/* --------------------------------- ESTILO DE CORTES --------------------------------------- */
+#titulo_cortes{
+    text-align: center;
+    font-size: 40pt;
+    color: white;
+    margin: 25px 0 70px 0;
+    transition: all .3s;
+}
+#titulo_cortes:hover{ 
+    color: rgb(239, 184, 139);
+}
+/* -----------------SLIDER-------------- */
+#Cortes{ /* TITULOS Y IMAGENES DE LOS CORTES  */
+    margin: auto;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+#Cortes ul{
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    width: calc(400px * 18); /* Cantidad de imagenes */
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+}
+
+#Cortes .Cortes_Estilos{
+    width: 400px;
+    position: relative;
+    /* border: 3px solid white; */
+    border-radius: 30px;
+    list-style: none;
+}
+.Cortes_Estilos img{
+    cursor: pointer;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: all .5s;
+}
+.texto-encima{
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 40pt;
+    font-weight: 600;
+    text-shadow: 2px 2px 0 black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .5s;
+}
+.Cortes_Estilos:hover .texto-encima {
+    opacity: 1; /* Al pasar el mouse por encima, el texto se muestra */
+    transform: scale(1,2);
+}
+
+/* ----------- Imagen del Slider con visualización del SCRIPT---------------- */
+#previewSlideShow{
+    /* fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 102;
+}
+#previewSlideShow #imagen{ /* contenedor blanco de fondo */
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 700px;
+    width: 550px;
+    margin: 100px auto;
+    box-shadow: 0 0 50px #000;
+}
+#previewSlideShow img{ /* Imagen que va dentro del contenedor */
+    position: absolute;
+}
+#previewSlideShow #titulo{ /* Titulo del corte */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: calc(700px/3);
+    font-size: 50px ;
+    width: 100%;
+    z-index: 103;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+}
+#previewSlideShow #descripcion{ /* descripción del corte */
+    font-family:  Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 18px 50px;
+    font-size: 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    z-index: 103;
+}
+#previewSlideShow #precio{ /* precio de los cortes */
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: calc(700px/3);
+    font-size: 20px;
+    width: 100%;
+    z-index: 103;
+}
+
+#previewSlideShow #cerrar{
+    color: #aaa;
+    cursor: pointer;
+    font-size: 60px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: all .3s;
+}
+#previewSlideShow #cerrar:hover{
+    color: #fff;
+}
+
+/* -----------Contenedor de Misión y Visión ------------------------*/
+#titulo_m_v{
+    text-align: center;
+    font-size: 40pt;
+    color: white;
+    padding: 15px;
+    transition: all .3s;
+    margin-bottom: 60px;
+}
+#titulo_m_v:hover{ 
+    color: rgb(239, 184, 139);
+}
+#content_mision_vision{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 25px 0 60px 0;
+}
+.content_mision{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    line-height: 200%;
+    width: 35%;
+    padding: 20px 35px;
+    color: white;
+    border: 2px solid white;
+    transition: all .3s ease-in;
+}
+.content_mision h1{
+    font-size: 40px;
+}
+.content_mision p{
+    font-size: 20px;
+    text-align: justify;
+}
+.content_mision:hover{
+    transform: scale(1.1);
+}
+.content_vision{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    line-height: 200%;
+    width: 35%;
+    padding: 20px 35px;
+    color: white;
+    border: 2px solid white;
+    transition: all .3s ease-in;
+}
+.content_vision:hover{
+    transform: scale(1.2);
+}
+.content_vision h1{
+    font-size: 40px;
+}
+.content_vision p{
+    font-size: 20px;
+    text-align: justify;
+}
+/* -------------------------------LOCALIZACIÓN DE LA BARBERÍA---------------------------------------------------- */
+.container-local{
+    width: 100%;
+    padding: 15px 50px 50px 50px;
+    background-color: black;
+}
+.container-local h1{
+    text-align: center;
+    font-size: 40pt;
+    padding: 0;
+    margin: 25px 0 60px 0;
+    color: white;
+    transition: all .3s;
+}
+.container-local h1:hover{
+    color: rgb(239, 184, 139);
+}
+.two-section{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* gap: 50px; */
+    
+}
+
+.imagenRef{ /* Contenido de imagen */
+    height: 450px;
+    width: 40%;
+}
+.imagenRef video{
+    width: 100%;
+    height: 450px;
+    transition: all .3s;
+    object-fit: cover;
+}
+/* .imagenRef img:hover{
+    box-shadow: 1px 1px 25px rgba(255, 255, 255,1);
+} */
+.maps{ /* Contenedor del mapa */
+    height: 450px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.maps h2{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 25pt;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 20px 0;
+    transition: all .3s;
+}
+.maps h2:hover{
+    color: rgb(239, 184, 139);
+}
+.maps iframe{
+    width: 500px;
+    height: 350px;
+    margin: auto;
+}
+
+/* Slider */
+@keyframes scroll {
+    0% {
+        -webkit-animation: translateX(0);
+        transform: translateX(0);        
+    }
+    0% {
+        -webkit-animation: translateX(calc(-400px * 9));
+        transform: translateX(calc(-400px * 9));        
+    }
+}
+/* Animacion de boton de reserva */
+@keyframes scaleBoton {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* RESPONSIVE--------------------------- */
+@media only screen and (max-width: 1366px) {
+    
+}
+@media only screen and (max-width: 1200px){/* --------------------------------------------------- */
+    /* Eslogan de la página */
+    #encabezado{ /* Fondo detras detrás del Eslogan */
+        min-height: 600px;
+    }
+    #eslogan{ /* Imagen del Eslogan */
+        width: 650px;
+        height: 400px;
+    }
+    #titulo_eslogan{ /* Titulo debajo de Eslogan */
+        font-size: 30pt;
+        margin-bottom: 55px;
+    }
+    #boton_reserva{ /* Boton de 'HAS TU RESERVA' */
+        font-size: 18pt;
+    }
+
+    /* ----Quienes Somos--- */
+    #titulo_nosotros{
+        font-size: 45px;
+        margin-bottom: 55px;
+    }
+    #section_nosotros{
+        padding: 0 150px;
+    }
+    /* ------Diseños y cortes de cabello ---- */
+    #titulo_cortes{
+        font-size: 45px;
+    }
+    #titulo_cortes:hover{ 
+        color: rgb(239, 184, 139);
+    }
+    #Cortes ul{
+    width: calc(300px * 18);
+    }
+    #Cortes .Cortes_Estilos{
+        width: 300px;
+        /* border: 3px solid white; */
+        border-radius: 25px;
+    }
+    .Cortes_Estilos img{
+        border-radius: 25px;
+    }
+    .texto-encima{
+        border-radius: 25px;
+        font-size: 30pt;
+        font-weight: 600;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: black;
+        text-shadow: 
+            1px 0px 0px white,
+            0px 1px 0px white,
+            -1px 0px 0px white,
+            0px -1px 0px white;
+        align-items: end;
+        opacity: 1;
+    }
+
+    @keyframes scroll {
+        0% {
+            -webkit-animation: translateX(0);
+            transform: translateX(0);        
+        }
+        0% {
+            -webkit-animation: translateX(calc(-300px * 9));
+            transform: translateX(calc(-300px * 9));        
+        }
+    }
+
+    /* ----------- Imagen del Slider con el SCRIPT---------------- */
+    #previewSlideShow #imagen{ /* <img src='' width='550' height='700'> MEDIDA ORIGINAL */
+        text-align: center;
+        height: 600px;
+        width: 480px;
+        margin: 120px auto;
+    }
+    #previewSlideShow img{
+        position: absolute;
+        height: 600px;
+        width: 480px;
+    }
+    #previewSlideShow #titulo{
+        line-height: calc(600px/3);
+        font-size: 45px ;
+        height: calc(600px/3);
+    }
+    #previewSlideShow #descripcion{
+        padding: 30px 50px;
+        font-size: 20px;
+        height: calc(600px/3);
+    }
+    #previewSlideShow #precio{
+        font-size: 18px;
+        height: calc(600px/3);
+        line-height: calc(600px/3);
+    }
+    
+    #previewSlideShow #cerrar{
+        font-size: 50px;
+    }
+
+
+    /* -------LOCALIZACIÓN DE LA BARBERÍA------ */
+.container-local{
+    width: 100%;
+    padding: 15px 50px 50px 50px;
+    background-color: black;
+}
+.container-local h1{
+    text-align: center;
+    font-size: 40pt;
+    padding: 0;
+    margin: 10px 0 30px 0;
+    color: white;
+    transition: all .3s;
+}
+.container-local h1:hover{
+    color: rgb(239, 184, 139);
+}
+.two-section{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* gap: 50px; */
+    
+}
+
+.imagenRef{ /* Contenido de imagen */
+    height: 450px;
+    width: 40%;
+}
+.imagenRef video{
+    width: 100%;
+    height: 450px;
+    transition: all .3s;
+    object-fit: cover;
+}
+/* .imagenRef img:hover{
+    box-shadow: 1px 1px 25px rgba(255, 255, 255,1);
+} */
+.maps{ /* Contenedor del mapa */
+    height: 450px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.maps h2{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 25pt;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 20px 0;
+    transition: all .3s;
+}
+.maps h2:hover{
+    color: rgb(239, 184, 139);
+}
+.maps iframe{
+    width: 420px;
+    height: 350px;
+    margin: auto;
+}
+}

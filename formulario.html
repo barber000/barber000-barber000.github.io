@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario RBS</title>
+	<link rel="icon" href="img/logo_rbs_pagina.png">
+    <link rel="stylesheet" href="CSS/styleWhatssap.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/fromStyle.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- Icono Whatssap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.link/t9vqi8" class="botonWhatssap pulse" target="_blank">
+    <i class="fa fa-whatsapp my-float "></i>
+    </a>
+
+    <header>
+        <div class="logo"><a href="index.html"><img src="img/logoRBS.png" id="logoRBS_nav" alt="Logo RBS" width="70" height="70"></a></div>
+        <div class="bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="pHorarios.html">HORARIOS</a></li>
+                <li><a href="pServicios.html">SERVICIOS</a></li>
+				<li><a href="formulario.html" class="active">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="cuerpo">
+        <div id="contenedor-form"> 
+            <h1>DEJANOS TUS DATOS: </h1>
+            <form action="https://formsubmit.co/leyton05.15@gmail.com" method="post" onSubmit="return validar()">
+                <p class="nombre">
+                    <input type="text" class="input" placeholder="Nombre y Apellido:" id="nombre" name="nombre"  onBlur="revisar(this); revisarTexto(this);" onKeyUp="revisar(this);  revisarTexto(this);" autocomplete="off" required>
+                </p>
+                
+                <p class="telefono">
+                    <input type="text" class="input" placeholder="Celular:" id="telefono" name="telefono" onBlur="revisar(this); revisarNumero(this); revisarLongitudTelefono(this,7,9);" onKeyUp="revisar(this); revisarNumero(this);revisarLongitudTelefono(this,7,9);" autocomplete="off" required>
+                </p>
+                
+                <p class="email">
+                    <input type="text" class="input" placeholder="Correo:" id="email" name="email" onBlur="revisar(this); revisarCorreo(this);" onKeyUp="revisar(this);revisarCorreo(this);" autocomplete="off" required>
+                </p>
+
+                <p class="mensaje">
+                    <textarea class="input" id="mensaje" placeholder="Escribemos tu mensaje:" name="mensaje" onBlur="revisar(this); revisarLongitud(this);" autocomplete="off" required></textarea>
+                </p>
+				<h5>Nos contactaremos contigo lo más pronto posible:') </h5>
+    
+                <div class="enviar">
+                    <input type="submit" value="ENVIAR" id="enviar">
+                    <div class="transicion"></div>
+                </div>
+				<input type="hidden" name="_next" value="https://barber000.github.io/formulario.html">
+				<input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </section>
+	<script src="JS/nav.js"></script>
+</body>
+<script src="JS/formulario.js"></script>
+<footer>
+    <section class="buttons">
+		<a href="https://www.facebook.com/profile.php?id=61555534425697&mibextid=9R9pXO" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://wa.link/5s2bg2" class="fa fa-whatsapp" target="_blank"></a>
+        <a href="https://www.instagram.com/dimelorichirich?igsh=MXU0Z24wZWc5YW5rMQ==" class="fa fa-instagram" target="_blank"></a>
+        <!-- <a href="#" class="fa fa-envelope"></a> -->
+    </section>
+    <section class="footer-derecho">
+		<a href="https://maps.app.goo.gl/ShzhEv4WwLsbGeGo7" target="_blank">Ubicación</a> |
+        <a href="formulario.html"">  Contáctame aquí</a>
+		<!-- "mailto:leyton02.12@gmail.com" -->
+    </section>
+	<p> Derechos Reservados © Copyright Flores</p>
+</footer>
+</html>

@@ -1,0 +1,144 @@
+@media only screen and (max-width: 576px){/* ------------------------------------------------------------ */
+    /* -----ENCABEZADO---- */
+    #encabezado{ /* Fondo detras detrás del Eslogan */
+        width: 100%; /*5184 * 3456*/
+        background-size: 100% 70%;
+        min-height: 300px;
+    }
+    #eslogan {
+        width: 250px;
+        height: 150px;
+    }
+    #titulo_eslogan {
+        margin-bottom: 20px;
+    }
+    #boton_reserva {
+        font-size: 8pt;
+        border: 2px solid rgb(239, 184, 139);
+    }
+    /* -----QUIENES SOMOS----- */
+    #titulo_nosotros {
+        font-size: 25px;
+        margin-bottom: 45px;
+    }
+    #section_nosotros{
+        padding: 0 70px;
+    }
+    #section_nosotros p {
+        font-size: 18px;
+    }
+    /*------ SLIDER --------- */
+    #titulo_cortes {
+        font-size: 25px;
+        margin: 20px 0 50px 0;
+    }
+    #Cortes ul{
+        width: calc(180px * 18);
+    }
+    #Cortes .Cortes_Estilos{
+        width: 180px;
+        border-radius: 12px;
+    }
+    .Cortes_Estilos img{
+        border-radius: 12px;
+    }
+    .texto-encima{
+        font-size: 16pt;
+        border-radius: 5px;       
+    }
+    @keyframes scroll {
+        0% {
+            -webkit-animation: translateX(0);
+            transform: translateX(0);        
+        }
+        0% {
+            -webkit-animation: translateX(calc(-180px * 9));
+            transform: translateX(calc(-180px * 9));       
+        }       
+    }
+
+     /* ----------- Imagen del Slider con el SCRIPT---------------- */
+    #previewSlideShow #imagen{ /* <img src='' width='550' height='700'> MEDIDA ORIGINAL */
+        height: 380px;
+        width: 280px;
+        margin: 120px auto;
+    }
+    #previewSlideShow img{
+        position: absolute;
+        height: 380px;
+        width: 280px;
+    }
+    #previewSlideShow #titulo{
+        line-height: calc(380px/3);
+        font-size: 35px ;
+        height: calc(380px/3);
+    }
+    #previewSlideShow #descripcion{
+        padding:13px 50px;
+        font-size: 13px;
+        height: calc(380px/3);
+    }
+    #previewSlideShow #precio{
+        font-size: 15px;
+        height: calc(380px/3);
+        line-height: calc(600px/3);
+    }
+    
+    #previewSlideShow #cerrar{
+        font-size: 30px;
+    }
+
+    /* -----------Mision y vision------------- */
+    #titulo_m_v{
+        font-size: 25px;
+    }
+    #content_mision_vision{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .content_mision{
+        line-height: 150%;
+        margin: auto;
+        width: 80%;
+    }
+    .content_mision h1{
+        font-size: 22px;
+    }
+    .content_mision p{
+        font-size: 15px;
+    }
+
+    .content_vision{
+        line-height: 150%;
+        margin: auto;
+        width: 80%;
+    }
+    .content_vision h1{
+        font-size: 22px;
+    }
+    .content_vision p{
+        font-size: 15px
+    }
+    /* CONTENIDO DE LA LOCALIZACIÓN----- */
+    .container-local h1 {
+        font-size: 25px;
+    }
+    .imagenRef{
+    height: 320px;
+    }
+    .imagenRef video{
+        width: 100%;
+        height: 200px;
+    }
+    .maps{
+    height: 300px;
+    }
+    .maps h2 {
+        font-size: 10pt;
+        margin: 0;
+    }
+    .maps iframe {
+        width: 260px;
+        height: 180px;
+    }
+}

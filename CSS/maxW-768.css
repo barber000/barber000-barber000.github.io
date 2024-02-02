@@ -1,0 +1,16 @@
+@media only screen and (max-width: 768px) {
+    #encabezado {
+        min-height: 380px;
+    }
+    #eslogan {
+        width: 400px;
+        height: 220px;
+    }
+    #titulo_eslogan {
+        font-size: 21pt;
+        margin-top: 10px;
+    }
+    #boton_reserva {
+        font-size: 13pt;
+    }
+}

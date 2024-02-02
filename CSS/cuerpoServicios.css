@@ -1,0 +1,154 @@
+/* -------------------- */
+body{
+    background-color: rgb(0, 0, 0);
+}
+#tabServicios{ /* Contenedor de servicios */
+    /* border: 2px solid white; */
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#tabs{ /* Contenedor de los titulos de servicio */
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(239, 184, 139);
+}
+ 
+#tabs a{ /* Titulos de los servicios disponibles */
+    width: 25%;
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 11px 11px 11px 11px;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+#tabs a:hover{
+    background-color: #eee;
+}
+.tabContent{ /* Contenido en blanco */
+    display: none;
+}
+.tabContent_elemt{ /* Contenido a mostrar de cada servicio */
+    display: flex;
+    align-items: center;
+    height: 60vh;
+}
+.tabContent_elemt img{
+    margin: auto;
+    height:400px;
+    /* box-shadow: 1px 2px 2rem white; */
+    align-content: center;
+    object-fit: cover;
+}
+.tabContent_elemt p{ /* Parrafo de los servicios */
+    color: white;
+    width: 40%;
+    padding: 50px;
+    font-size: 30px;
+    line-height: 1.5em;
+    margin: auto;
+    text-align: center;
+}
+.tabActual{ /* Para saber en jquery que tab, esta activo */
+    background-color: black !important;
+    color: white !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    #tabs a {
+        font-size: 24px;
+    }
+    .tabContent_elemt img{
+        height:380px;
+        width:320px;
+    }
+    .tabContent_elemt p {
+        padding: 40px;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #tabs a {
+        font-size: 22px;
+    }
+
+    .tabContent_elemt img{
+        height:330px;
+        width:250px;
+    }
+
+    .tabContent_elemt p {
+        padding: 30px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #tabs a {
+        font-size: 20px;
+    }
+
+    .tabContent_elemt{ /* Contenido a mostrar de cada servicio */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 30px;
+        height: 550px;
+    }
+
+    .tabContent_elemt img{
+        height:250px;
+        width:200px;
+    }
+
+    .tabContent_elemt p {
+        width: 100%;
+        padding: 0 100px;
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #tabs a {
+        font-size: 13px;
+    }
+    .tabContent_elemt{
+        height: 500px;
+    }
+    .tabContent_elemt img{
+        height:220px;
+        width:150px;
+    }
+
+    .tabContent_elemt p {
+        font-size: 13px;
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #tabs a {
+        font-size: 9px;
+    }
+    .tabContent_elemt{
+        height: 450px;
+    }
+
+    .tabContent_elemt img{
+        height:180px;
+        width:120px;
+    }
+
+    .tabContent_elemt p {
+        font-size: 9px;
+        padding: 0 20px;
+    }
+}
